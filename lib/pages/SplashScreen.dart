@@ -9,10 +9,23 @@ class SplashScreen extends StatelessWidget{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              child: Image.asset("images/splash.png"),
+            Image.asset(
+              "images/splash.png", 
+              height: 300
             ),
-          ],),
+            Container(
+              margin: EdgeInsets.only(top: 50),
+              child: Text(
+                "Buy Fresh Products", 
+                style: TextStyle(
+                  color: Color(0xFF00A368),
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
