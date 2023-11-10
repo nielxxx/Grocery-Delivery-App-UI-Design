@@ -10,7 +10,7 @@ class SplashScreen extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              "images/groceryB1.png", 
+              "assets/images/groceryB1.png", 
               height: 300
             ),
             Container(
@@ -21,6 +21,28 @@ class SplashScreen extends StatelessWidget{
                   color: Color(0xFF00A368),
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox( height: 50),
+            InkWell(
+              onTap: () {
+                Navigator.pushReplacementNamed(context, "homePage");
+              },
+              // for animation on container
+              child: Ink(
+                padding: EdgeInsets.symmetric(horizontal: 80, vertical: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Color(0xFF00A368),
+                ),
+                child: Text(
+                  "Buy Now",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
