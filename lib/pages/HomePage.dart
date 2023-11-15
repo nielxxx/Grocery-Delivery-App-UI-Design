@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 child: Column(
-                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Welcome", 
@@ -70,7 +70,38 @@ class HomePage extends StatelessWidget {
                         fontWeight: 
                         FontWeight.bold,
                       ),
-                    )
+                    ),
+                    Text(
+                      "What do you want to Buy?",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ],
+                ),
+              ),
+              //search widget
+              Container(
+                margin: EdgeInsets.all(15),
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Row(
+                  children:[
+                    Icon(Icons.search),
+                    Container(
+                      margin: EdgeInsets.only(left: 10),
+                      width: 250,
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: "Search here...",
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    Spacer(),
+                    Icon(Icons.filter_list),
                   ],
                 ),
               ),
